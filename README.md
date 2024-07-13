@@ -8,6 +8,7 @@
 $ q kdblite.q -p 5555
 
 #### From a q client
+```q
 q)h:hopen 5555
 q)h(`.kdblite.createTable;`t;([] `long$(); `long$()))
 `t
@@ -108,3 +109,4 @@ q)h(`.kdblite.deleteTable;`t)
 `.
 q)h(`.kdblite.listTables;::)
 `symbol$()
+```
