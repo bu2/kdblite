@@ -5,7 +5,9 @@
 ### Getting Started
 
 #### Start the kdblite server
+```sh
 $ q kdblite.q -p 5555
+```
 
 #### From a q client
 ```q
