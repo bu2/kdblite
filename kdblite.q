@@ -1,9 +1,9 @@
 \d .qlog
 
 error:{2 (string .z.p),": ",$[10h~type x;x;string x],"\n";}
+warn:error
 abort:{error x;'x}
 print:{1 (string .z.p),": ",$[10h~type x;x;string x],"\n";}
-warn:print
 info:print
 debug:print
 
@@ -27,6 +27,17 @@ query:value;
 .kdblite.select:{[t;w;g;c] ?[t;w;g;c]}
 .kdblite.update:{[t;w;g;c] ![t;w;g;c]}
 .kdblite.delete:{[t;w;c] ![t;w;0b;c]}
+
+
+// Timer
+
+handleTimer:{
+ .qlog.info"Handle timer: ",string x;
+ .qlog.info"Checkpoint"
+ system"l";
+ }
+
+.z.ts:handleTimer;
 
 
 // IPC
